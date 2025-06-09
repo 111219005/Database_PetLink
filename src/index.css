@@ -1,0 +1,586 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  background-color: #FFF7D8;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.card_font {
+  font-size: 10px;
+}
+
+.box {
+  position: relative;
+}
+
+.box-word {
+  display: none;
+}
+
+.box:hover>.box-word {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 999;
+  color: #fff;
+  font-size: .8em;
+  background: #474747;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  /* 確保文字不會換行 */
+}
+
+input[type=number].no-spinner::-webkit-outer-spin-button,
+input[type=number].no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (min-width: 1537px) {
+  .card_list {
+    width: auto;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .filter-w,
+  .cart-title,
+  .modal-box,
+  .cart-item,
+  .cart-Checkout {
+    width: 1240px;
+  }
+
+  .checkbox-item {
+    margin-right: 15px;
+  }
+
+  .cart-header-visible {
+    display: flex;
+  }
+
+  .cart-item-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .dog-cat-title {
+    width: 1250px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1536px) {
+  .card_list {
+    width: 961px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .filter-w,
+  .cart-title,
+  .modal-box,
+  .cart-item,
+  .cart-Checkout {
+    width: 926px;
+  }
+
+  .checkbox-item {
+    margin-right: 7px;
+  }
+
+  .cart-header-visible {
+    display: flex;
+  }
+
+  .cart-item-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .dog-cat-title {
+    width: 940px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+  .filter-w,
+  .cart-title,
+  .modal-box,
+  .cart-item,
+  .cart-Checkout {
+    width: 644px;
+  }
+
+  .checkbox-item {
+    margin-right: 20px;
+  }
+
+  .cart-item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .filter-w {
+    width: 95%;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .checkbox-item {
+    margin-right: 20px;
+  }
+
+  .cart-item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.custom-toast-progress {
+  background-color: #7392B9;
+}
+
+.Toastify__progress-bar--wrp {
+  background-color: #7392B950;
+}
+
+[data-theme="light"] {
+  .spin-container {
+    background-color: #FFF7D8;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #7392B9;
+    border-top: 4px solid #9AA57C;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .Toastify__progress-bar--bg {
+    background-color: #9AA57C;
+  }
+
+  .custom-toast-body {
+    font-weight: bold;
+    font-size: 16px;
+    color: #7392B9;
+  }
+
+  .Toastify__toast-icon svg {
+    fill: #7392B9;
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-toast {
+    background-color: #f4f4f4;
+    border: 1px solid #7392B9;
+    border-radius: 8px;
+    color: #333;
+  }
+
+  .Toastify__toast--success .Toastify__icon {
+    color: #7392B9 !important;
+    /* 設置勾選圖示顏色 */
+    background-color: #7392B9 !important;
+  }
+
+  .Toastify__progress-bar.progress-bar-custom {
+    background-color: #7392B9 !important;
+  }
+
+  .header-bg {
+    background-color: #9AA57C !important;
+  }
+
+  .header-lit {
+    background-color: #FFF7D8;
+  }
+
+  .header-btn {
+    background-color: #7392B9;
+    color: white;
+  }
+
+  .header-btn:hover {
+    background-color: white;
+    color: #7392B9;
+  }
+
+  .home-bg {
+    background-color: #FFF7D8;
+  }
+
+  .home-btn {
+    background-color: #7392B9;
+    color: white;
+  }
+
+  .home-btn:hover {
+    background-color: white;
+    color: #7392B9;
+  }
+
+  .category:hover {
+    color: #7392B9;
+  }
+
+  .categoryBar-mobile,
+  .donate {
+    background-color: white;
+  }
+
+  .item-intro {
+    color: #FAAA5D;
+    background-color: white;
+    border: #FAAA5D 1px solid;
+  }
+
+  .item-bg {
+    background-color: #FFFFFF;
+  }
+
+  .item-text {
+    color: black;
+  }
+
+  .filter-bg {
+    background-color: #9AA57C;
+  }
+
+  .filter-bg:hover {
+    background-color: #7392B9;
+  }
+
+  .filter-h {
+    background-color: #7392B9;
+  }
+
+  .navbar-bg {
+    background-color: white !important;
+    color: black;
+  }
+
+  .nav-h:hover {
+    color: #7392B9;
+  }
+
+  .cart-bg {
+    color: black;
+    background-color: #FFF7D8;
+  }
+
+  .count-bg {
+    background-color: #FAAA5D;
+  }
+
+  .cart-header {
+    background-color: white;
+  }
+
+  .checkbox-header,
+  .checkbox-item {
+    background-color: white;
+  }
+
+  .cart-label {
+    width: 76px;
+    color: white;
+    background-color: #FAAA5D;
+    border-radius: 10px;
+    padding: 0px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-label-select {
+    width: 76px;
+    color: black;
+    background-color: #FFF7D8;
+    border-radius: 10px;
+    padding: 0px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-item-no {
+    background-color: #FAAA5D29;
+  }
+
+  .cart-item-yes {
+    background-color: #FAAA5D;
+  }
+
+  .cart-Checkout {
+    background-color: white;
+  }
+
+  .checkout-btn {
+    background-color: #FAAA5D;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .checkout-btn:hover {
+    background-color: white;
+    color: #FAAA5D;
+    border-radius: 10px;
+    border: 1px solid #FAAA5D;
+  }
+}
+
+@media (min-width: 640px) {
+  [data-theme="light"] .header-bg {
+    background-color: #9AA57C !important;
+  }
+
+  [data-theme="light"] .header-lit {
+    background-color: transparent;
+    /* 或者其他顏色，確保不覆蓋 */
+  }
+}
+
+[data-theme="dark"] {
+  .spin-container {
+    background-color: #D3B997;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #2C1C1A;
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .Toastify__progress-bar--bg {
+    background-color: #98694E;
+  }
+
+  .custom-toast-body {
+    font-weight: bold;
+    font-size: 16px;
+    color: #98694E;
+  }
+
+  .Toastify__toast-icon svg {
+    fill: #2C1C1A;
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-toast {
+    background-color: #98694E;
+    border: 1px solid #2C1C1A;
+    border-radius: 8px;
+    color: #000000;
+  }
+
+  .Toastify__toast--success .Toastify__icon {
+    color: #2C1C1A !important;
+    /* 設置勾選圖示顏色 */
+    background-color: #2C1C1A !important;
+  }
+
+  .Toastify__progress-bar.progress-bar-custom {
+    background-color: #2C1C1A !important;
+  }
+
+  .header-bg {
+    background-color: #98694E !important;
+  }
+
+  .header-lit {
+    background-color: #D3B997;
+  }
+
+  .header-btn {
+    background-color: #2C1C1A;
+    color: white;
+  }
+
+  .header-btn:hover {
+    background-color: white;
+    color: #2C1C1A;
+  }
+
+  .home-bg {
+    background-color: #D3B997;
+  }
+
+  .home-btn {
+    background-color: #2C1C1A;
+    color: white;
+  }
+
+  .home-btn:hover {
+    background-color: white;
+    color: #2C1C1A;
+  }
+
+  .category:hover {
+    color: #572918;
+  }
+
+  .categoryBar-mobile,
+  .donate {
+    background-color: #572918;
+  }
+
+  .donate {
+    color: white;
+  }
+
+  .item-intro {
+    color: black;
+    background-color: none;
+    border: #2C1C1A 1px solid;
+  }
+
+  .item-bg {
+    background-color: #98694E;
+  }
+
+  .item-text {
+    color: white;
+  }
+
+  .filter-bg {
+    background-color: #572918;
+  }
+
+  .filter-bg:hover {
+    background-color: #2C1C1A;
+  }
+
+  .filter-h {
+    background-color: #2C1C1A;
+  }
+
+  .navbar-bg {
+    background-color: #572918 !important;
+    color: white;
+  }
+
+  .nav-h:hover {
+    color: #FAAA5D;
+  }
+
+  .cart-bg {
+    color: white;
+    background-color: #D3B997;
+  }
+
+  .count-bg {
+    background-color: #D3B997;
+  }
+
+  .cart-header {
+    background-color: #2C1C1A;
+  }
+
+  .checkbox-header {
+    background-color: #D3B997;
+  }
+
+  .checkbox-item {
+    background-color: #572918;
+  }
+
+  .cart-label,
+  .cart-label-select {
+    width: 76px;
+    color: black;
+    background-color: #D3B997;
+    border-radius: 10px;
+    padding: 0px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cart-item-no {
+    background-color: #98694E29;
+    color: black;
+  }
+
+  .cart-item-yes {
+    background-color: #98694E;
+    color: white;
+  }
+
+  .cart-Checkout {
+    background-color: #2C1C1A;
+  }
+
+  .checkout-btn {
+    background-color: #98694E;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .checkout-btn:hover {
+    background-color: white;
+    color: #98694E;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 640px) {
+  [data-theme="dark"] .header-bg {
+    background-color: #98694E !important;
+  }
+
+  [data-theme="dark"] .header-lit {
+    background-color: transparent;
+    /* 或者其他顏色，確保不覆蓋 */
+  }
+}

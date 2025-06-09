@@ -1,0 +1,321 @@
+基本設置
+html {
+    box-sizing: border-box;
+    background-color: #FFF7D8;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    color: black;
+  }
+  
+  /* 標題字體設定 */
+  body h1 { font-size: 30px; }
+  body h2 { font-size: 24px; }
+  body h3 { font-size: 20px; }
+  body h4 { font-size: 15px; }
+  body h5 { font-size: 13px; }
+  body h6 { font-size: 12px; }
+  body p  { font-size: 10px; }
+  
+  /* 整體畫面區域 */
+  .content {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* 背景圖片 */
+  .bg {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.9;
+}
+  
+  /* 返回箭頭與登入標題 */
+  .back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    cursor: pointer;
+  }
+  /* 登入表單 */
+  .area {
+    position: relative;
+    margin-top: 25px;
+    margin-left: 158px;
+    margin-bottom: 25px;
+    width: 500px;
+    background: #FAAA5DCC;
+    border-radius: 30px;
+    padding-top: 41px;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 45px;
+    z-index: 1;
+    @media(max-width: 768px){
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+    }
+  }
+  
+  .name, .email, .code{
+    margin-bottom: 24px;
+    height: 51px;
+  }
+  .sure{
+    margin-bottom: 13px;
+    height: 51px;
+  }
+  
+  .area label {
+    font-size: 13px;
+    margin-bottom: 0px;
+    display: block;
+  }
+  
+  /* 輸入框樣式調整為卡片風格 */
+  .area input {
+    width: 100%;
+    padding-right: 3px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .name, .code, .email, .sure {
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-left: 9px;
+    padding-right: 10px;
+    padding-bottom: 7px;
+    position: relative;
+  }
+  
+  .area label {
+    font-size: 13px;
+    color: #00000099;
+    font-weight: normal;
+    margin-bottom: 0px;
+    display: block;
+  }
+  
+  /* 眼睛 icon 位置調整 */
+  .eye {
+    position: absolute;
+    right: 14px;
+    bottom: 11px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  /* 忘記密碼 / 註冊 */
+  .function{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    text-decoration: underline;
+    text-decoration-color: white;
+  }
+  .area .sign {
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+    .area .sign:hover {
+    color: #9AA57C;
+  }
+  
+  /* 登入按鈕 */
+  .btn2{
+    text-align: center;
+    margin-top: 117px;
+    @media(max-width: 768px){
+      text-align: center;
+    }
+  }
+  .SignUp {
+    width: 100%;
+    padding: 8px 40px;
+    background-color: #7392B9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 133px;
+  }
+  
+  .SignUp:hover {
+    background-color: white;
+    color: #7392B9;
+  }
+  
+  /* 分隔線 */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 15px 0; /* 修改為較自然的上下間距 */
+  }
+  
+  .divider .line {
+    height: 1px;
+    width: 50%;
+    background-color: white;
+  }
+  
+  .divider span {
+    margin: 0 15px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* 社群按鈕區塊 */
+  .social-SignUp {
+    margin-top: 33vh;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 53px;
+  }
+  
+  .social-button img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-button img:hover {
+    transform: scale(1.1);
+  }
+
+  [data-theme="light"]{
+    html{
+      background-color: #FFF7D8;
+    }
+    body{
+      color: black;
+    }
+    .back{
+      color: black;
+    }
+    .area{
+      background: #FAAA5DCC;
+    }
+    .area input{
+      border-bottom: 1px solid black;
+    }
+    .name, .code, .email, .sure {
+      background-color: white;
+      height: 51px;
+    }
+    .area label{
+      color: #00000099;
+    }
+    .function{
+      text-decoration-color: #FFFFFF;
+    }
+    .area .sign {
+    color: white;
+  }
+  .area .sign:hover {
+    color: #9AA57C;
+  }
+  .SignUp {
+    background-color: #7392B9;
+    color: white;
+  }
+  .SignUp:hover {
+    background-color: white;
+    color: #7392B9;
+  }
+  .divider .line {
+    background-color: white;
+  }
+  .divider span {
+    margin: 0 15px;
+    font-size: 14px;
+    color: white;
+  }
+  }
+  [data-theme="dark"]{
+    html{
+      background-color: #D3B997;
+    }
+    body{
+      color: #2C1C1A;
+    }
+    .back{
+      color: #2C1C1A;
+    }
+    .area{
+      background: #98694ECC;
+    }
+    .area input{
+      border-bottom: 1px solid #D3B997;
+      color: #D3B997;
+    }
+    .name, .code, .email, .sure {
+      background-color: #572918;
+    }
+    .area label{
+      color: #BD9C8E;
+    }
+    .function{
+      text-decoration-color: #572918;
+    }
+    .area .sign {
+    color: #2C1C1A;
+  }
+  .area .sign:hover {
+    color: white;
+  }
+  .SignUp {
+    background-color: #2C1C1A;
+    color: white;
+  }
+  .SignUp:hover {
+    background-color: white;
+    color: #2C1C1A;
+  }
+  .divider .line {
+    background-color: #572918;
+  }
+  .divider span {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #572918;
+  }
+  }

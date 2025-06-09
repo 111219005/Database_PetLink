@@ -1,0 +1,338 @@
+/*basic*/
+
+html{
+    background-color: #FFFFFF; 
+    box-sizing: border-box;
+  }
+  *,*:before,*:after{
+    box-sizing: inherit;
+  }
+  body{
+    margin: 0;
+  }
+  body h1{
+    font-size: 30px;
+    @media(max-width: 768px){
+      font-size: 20px;
+    }
+  }
+  body h2{
+    font-size: 24px;
+  }
+  body h3{
+    font-size: 20px;
+    @media(max-width: 768px){
+      font-size: 12px;
+    }
+  }
+  body h4{
+    font-size: 15px;
+    @media(max-width: 768px){
+      font-size: 10px;
+    }
+  }
+  body h5{
+    font-size: 13px;
+  }
+  body h6{
+    font-size: 12px;
+  }
+  body p{
+    font-size: 10px;
+  }
+  /*content*/
+  #root {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /* 移除 height 限制 */
+  }
+  .content{
+    background-color: #FFF7D8;
+    width: 100%;
+    padding-top: 35px ;
+    min-height: 100vh;
+    height: auto;
+    margin-top: 0px;
+    @media(max-width: 768px){
+      padding-top: 0px;
+      margin-top: 62px;
+    }
+  }
+  /*detail-top*/
+  .detail-top{
+    display: flex;
+    padding-top: 35px;
+    @media (max-width: 1100px) {
+        flex-direction: column;
+        @media (max-width: 768px) {
+          padding-top: 62px;
+    }
+  }
+  }
+  .detail-img{
+    padding-right: 52.5px;
+    padding-left: 160px;
+    width: 50%;
+    @media (max-width: 1100px) {
+      padding-right: 160px;
+      padding-left: 160px;
+      margin-bottom: 50px;
+      width: 100%;
+  }
+  @media(max-width: 768px){
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  }
+  .detail-img-img{
+    width: 100%;
+    height: 534px;
+    object-fit: cover;
+    @media(max-width: 768px){
+      height: 440px;
+    }
+  }
+  .detail-c{
+    padding-right: 160px;
+    padding-left: 53.5px;
+    width: 50%;
+    @media (max-width: 1100px) {
+      padding-right: 160px;
+      padding-left: 160px;
+      width: 100%;
+  }
+  @media(max-width: 768px){
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  }
+  .detail-c-name{
+    margin-bottom: 20px;
+    @media(max-width: 440px){
+      font-size: 30px;
+    }
+  }
+  .detail-c-key{
+    margin-bottom: 23px;
+    @media(max-width: 440px){
+      font-size: 15px;
+    }
+  }
+  .card {
+    width: 100%;
+    border-radius: 12px;
+    font-family: sans-serif;
+    margin: 0 auto;
+  }
+  .section-title {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    height: 25px;
+    font-size: 18px;
+    @media(max-width: 768px){
+      font-size: 15px;
+    }
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20.5px 8%;
+    align-items: center;
+    margin-bottom: 30px;
+    @media(max-width: 768px){
+      margin-bottom: 25px;
+    }
+  }
+  .label {
+    font-weight: bold;
+    color: black;
+    @media(max-width: 768px){
+      font-size: 15px;
+    }
+  }
+  .value{
+    width: 80px;
+    @media(max-width: 768px){
+      font-size: 15px;
+    }
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .btn {
+    flex: 1;
+    padding: 10px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 24.5px;
+    font-size: 20px;
+  }
+  .btn-secondary {
+    background-color: #7392B9;
+    color: white;
+    box-shadow: none;
+  }
+  .btn-secondary:hover{
+    background-color: white;
+    color: #7392B9;
+  }
+  .btn-primary {
+    background-color: #9AA57C;
+    color: white;
+    box-shadow: none;
+  }
+  .btn-primary:hover{
+    background-color: white;
+    color: #9AA57C;
+  }
+  @media (max-width: 768px) {
+    .btn-group {
+      position: fixed;
+      background-color: #FFF7D8;
+      bottom: 0px;
+      padding-bottom: 24px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      z-index: 1000;
+      gap: 0;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .btn {
+      margin-top: 0;
+      font-size: 20px;
+      height: 50px;
+      width: 50%;
+      border-radius: 0;
+    }
+  }
+  /*detail-bottom*/
+  .detail-comment{
+    padding-left: 160px;
+    padding-right: 160px;
+    margin-top: 70px;
+    padding-bottom: 100px;
+    @media(max-width: 768px){
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-top: 0px;
+    }
+  }
+  .detail-comment-h{
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    padding-top: 13px;
+    @media(max-width: 1110px){
+      font-size: 18px;
+    }
+    @media(max-width: 768px){
+      height: 25px;
+      font-size: 15px;
+      padding-top: 0px;
+    }
+  }
+  [data-theme="light"]{
+    html{
+      background-color: white;
+    }
+    .content{
+      background-color: #FFF7D8;
+      color: black;
+    }
+    .section-title{
+      background-color: white;
+      color: black;
+    }
+    .label{
+      color: black;
+    }
+    .value{
+      color: #000000;
+    }
+    .btn-secondary{
+      background-color: #7392B9;
+      color: white;
+    }
+    .btn-secondary:hover{
+      background-color: white;
+      color: #7392B9;
+    }
+    .btn-primary{
+      background-color: #9AA57C;
+      color: white;
+    }
+    .btn-primary:hover{
+      background-color: white;
+      color: #9AA57C;
+    }
+    .btn-group{
+      background-color: #FFF7D8;
+    }
+    .detail-comment-h{
+      background-color: white;
+      color: black;
+    }
+    .detail-comment-c{
+      color: black;
+      line-height: 170%;
+      letter-spacing: 0.5px;
+    }
+  }
+  [data-theme="dark"]{
+    html{
+      background-color: #572918;
+    }
+    .content{
+      background-color: #D3B997;
+      color: #2C1C1A;
+    }
+    .section-title{
+      background-color: #98694E;
+      color: #2C1C1A;
+    }
+    .label{
+      color: #000000;
+    }
+    .value{
+      color: #000000;
+    }
+    .btn-secondary{
+      background-color: #572918;
+      color: white;
+    }
+    .btn-secondary:hover{
+      background-color: white;
+      color: #572918;
+    }
+    .btn-primary{
+      background-color: black;
+      color: white;
+    }
+    .btn-primary:hover{
+      background-color: white;
+      color: black;
+    }
+    .btn-group{
+      background-color: #D3B997;
+    }
+    .detail-comment-h{
+      background-color: #98694E;
+      color: #2C1C1A;
+    }
+    .detail-comment-c{
+      color: #2C1C1A;
+    }
+  }
