@@ -19,6 +19,7 @@ export default function Header() {
                         <p className="!text-base">沒時間養寵物？但你依然可以給他一個家！</p>
                         <p className="!text-base">你出資助；我來照顧，讓愛不缺席！</p>
                         <p className="!text-base">遠端領養毛孩，定期關注牠的可愛日常。</p>
+                        <div className="grid grid-cols-2 gap-10">
                         <motion.div
                             style={{ flex: 1 }}
                             whileHover={{ scale: 1.05 }}
@@ -31,6 +32,19 @@ export default function Header() {
                                 </button>
                             </Link>
                         </motion.div>
+                        <motion.div
+                            style={{ flex: 1 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <Link to="/addPet">
+                                <button className="header-btn text-white flex justify-center items-center py-2 px-4 my-4 rounded-lg cursor-pointer">
+                                    新增寵物
+                                </button>
+                            </Link>
+                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </div>

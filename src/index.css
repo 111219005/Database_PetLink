@@ -242,11 +242,11 @@ input[type=number].no-spinner::-webkit-inner-spin-button {
     color: #7392B9;
   }
 
-  .home-bg {
+  .home-bg, .add-bg {
     background-color: #FFF7D8;
   }
 
-  .home-btn {
+  .home-btn, .add-btn {
     background-color: #7392B9;
     color: white;
   }
@@ -254,6 +254,12 @@ input[type=number].no-spinner::-webkit-inner-spin-button {
   .home-btn:hover {
     background-color: white;
     color: #7392B9;
+  }
+
+  .add-btn:hover {
+    background-color: white;
+    color: #7392B9;
+    border: 1px solid #7392B9;
   }
 
   .category:hover {
@@ -452,16 +458,16 @@ input[type=number].no-spinner::-webkit-inner-spin-button {
     color: #2C1C1A;
   }
 
-  .home-bg {
+  .home-bg, .add-bg {
     background-color: #D3B997;
   }
 
-  .home-btn {
+  .home-btn, .add-btn {
     background-color: #2C1C1A;
     color: white;
   }
 
-  .home-btn:hover {
+  .home-btn:hover, .add-btn:hover {
     background-color: white;
     color: #2C1C1A;
   }
@@ -561,7 +567,7 @@ input[type=number].no-spinner::-webkit-inner-spin-button {
     background-color: #2C1C1A;
   }
 
-  .checkout-btn {
+  .checkout-btn, .form-bg {
     background-color: #98694E;
     color: white;
     border-radius: 10px;

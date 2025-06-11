@@ -3,6 +3,7 @@ import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
@@ -12,11 +13,12 @@ import Intro from "./pages/Intro/Intro";
 import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
 import Cart from "./pages/Cart"
+import AddPetForm from "./pages/AddPetForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from './pages/Profile/Profile';
-//import { feedProducts } from "./api/fireStore";
-//feedProducts();
+import axios from "axios";
+
 import {
   QueryClient,
   QueryClientProvider,
@@ -24,6 +26,19 @@ import {
 const queryClient = new QueryClient()
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // 呼叫後端 API
+    axios.get("http://localhost:5000/api/data")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("無法取得資料:", error);
+      });
+  }, []);
+
   return (
     <>
       <ToastContainer position="top-right" autoClose={3000} />
@@ -42,6 +57,7 @@ function App() {
                   <Route path="LogIn" element={<LogIn />} />
                   <Route path="cart" element={<Cart />} />
                   <Route path="Profile" element={<Profile />} />
+                  <Route path="addPet" element={<AddPetForm />} />
                 </Routes>
               </BrowserRouter>
             </HelmetProvider>
