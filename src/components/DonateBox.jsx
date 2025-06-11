@@ -52,6 +52,14 @@ export default function DonateBox({ item, values, setValues, selected }) {
     train: "娛樂訓練",
   };
 
+  const expMap = {};
+  item.expences?.forEach(exp => {
+    if (exp.name === "食物開銷") expMap.food = exp.amount;
+    if (exp.name === "日常開銷") expMap.daily = exp.amount;
+    if (exp.name === "醫療開銷") expMap.medical = exp.amount;
+    if (exp.name === "訓練開銷") expMap.train = exp.amount;
+  });
+
   return (
     <div className="grid lg:grid-cols-5 lg:items-center lg:justify-center w-auto">
       <div className="grid lg:grid-cols-4 lg:col-span-4 lg:items-center lg:justify-center wrapper">
@@ -64,14 +72,14 @@ export default function DonateBox({ item, values, setValues, selected }) {
               <input
                 type="number"
                 min="0"
-                value={values[type]}
+                value={expMap[type] ?? 0}
                 onChange={(e) => handleInputChange(type, e)}
                 className="w-19 lg:w-12 text-center donate rounded mx-1 text-black py-1 h-[44px] text-[13px] no-spinner"
               />
               <button onClick={() => handleIncrement(type)} className="donate text-black py-1 rounded w-4 h-[44px] cursor-pointer">+</button>
             </div>
             <div className="need text-[10px] flex lg:items-center lg:justify-center">
-              需求：{item[type]}
+              需求：${expMap[type] ?? 0}
             </div>
           </div>
         ))}

@@ -14,8 +14,8 @@ export default function CartHeader({ allSelected, onSelectAllChange }) {
                     </div>
                     <div className="grid md:grid-cols-5 grid-cols-3 text-center lg:col-start-3 lg:col-end-6">
                         <div className="flex items-center justify-center"><a className="cart-label">食物</a></div>
-                        <div className="flex items-center justify-center"><a className="cart-label">醫療</a></div>
                         <div className="flex items-center justify-center"><a className="cart-label">生活用品</a></div>
+                        <div className="flex items-center justify-center"><a className="cart-label">醫療</a></div>
                         <div className="flex items-center justify-center"><a className="cart-label">娛樂訓練</a></div>
                         <div className="flex items-center justify-center"><a className="cart-label">操作</a></div>
                     </div>

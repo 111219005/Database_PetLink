@@ -34,13 +34,13 @@ export default function Footer() {
             data-zh="前端工程設計"
             data-en="Frontend web development"
           >
-            跨平台前端工程設計
+            資料庫系統
           </h6>
           <h6
             data-zh="期末專題成果"
             data-en="Final Project Results"
           >
-            期中專題成果
+            期末專題成果
           </h6>
         </div>
         <div className="middle1">

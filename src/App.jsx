@@ -14,6 +14,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
 import Cart from "./pages/Cart"
 import AddPetForm from "./pages/AddPetForm";
+import ModifyPetForm from "./pages/ModifyPetForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from './pages/Profile/Profile';
@@ -52,12 +53,13 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="introduction" element={<Intro />} />
                   <Route path=":productSpecies" element={<Species />} />
-                  <Route path=":productSpecies/:productId" element={<Product />} />
+                  <Route path=":productSpecies/:productId" element={<Product />} />                  
                   <Route path="SignUp" element={<SignUp />} />
                   <Route path="LogIn" element={<LogIn />} />
                   <Route path="cart" element={<Cart />} />
                   <Route path="Profile" element={<Profile />} />
-                  <Route path="addPet" element={<AddPetForm />} />
+                  <Route path="addPet" element={<AddPetForm />} />   
+                  <Route path="modifyPet/:id" element={<ModifyPetForm />} />             
                 </Routes>
               </BrowserRouter>
             </HelmetProvider>
